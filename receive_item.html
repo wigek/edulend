@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="recibo" content="recibo de equipos">
+    <meta property="og:title" content="Página de recibos">
+    <title>Recibo de equipos</title>
+</head>
+
+<body>
+    <header>
+        <h1>EduLend</h1>
+        <nav>
+            <ul>
+                <li><a href="adm_lend_state.html">Estado de préstamo de usuario</a></li>
+                <li><a href="receive_item.html">Recibo de equipos</a></li>
+                <li><a href="user_profile.html">Perfiles de usuario</a></li>
+                <li><a href="item_gestor.html">Gestión de artículos</a></li>
+                <li><a href="item_inventory.html">Inventario de artículos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Recibo de equipos</h2>
+            <form action="" method="post">
+                <label for="tipo">Tipo de equipo:</label>
+                <input type="text" name="tipo" id="tipo" required>
+
+                <label for="marca">Marca:</label>
+                <input type="text" name="marca" id="marca">
+
+                <label for="fecha">Fecha de recibo:</label>
+                <input type="date" name="fecha" id="fecha" required>
+
+                <label for="estado">Estado del equipo:</label>
+                <select name="estado" id="estado" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="bueno">Buen estado</option>
+                    <option value="defectuoso">Con defectos</option>
+                    <option value="malo">Mal estado</option>
+                </select>
+
+                <label for="observaciones">Observaciones:</label>
+                <textarea name="observaciones" id="observaciones" rows="4" placeholder="Detalles adicionales del equipo"></textarea>
+
+                <button type="submit">Registrar Recibo</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="login.html">Cerrar sesión</a>
+        </div>
+    </footer>
+</body>
+
+</html>

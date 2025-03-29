@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <title>Gestion De Usuario</title>
+</head>
+
+<body>
+    <header>
+        <h1>Edulend</h1>
+        <nav>
+            <ul>
+                <li><a href="adm_lend_state.html">Estado de prestamo de usuario</a></li>
+                <li><a href="receive_item.html">Recibo de equipos</a></li>
+                <li><a href="user_profile.html">Perfiles de usuario</a></li>
+                <li><a href="item_gestor.html">Gestión de articulos</a></li>
+                <li><a href="item_inventory.html">Inventario de articulos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="gestor">
+        <section>
+            <form action="">
+                <fieldset>
+                    <legend>Informacion personal</legend>
+                    <label>Nombre:
+                        <input type="text" name="nombre">
+                    </label>
+                    <label>Apellido:
+                        <input type="text" name="apellido">
+                    </label>
+                    <label>Dirección
+                        <input type="text" name="direccion">
+                    </label>
+                    <label>Correo Electronico:
+                        <input type="email" name="email">
+                    </label>
+                </fieldset>
+            </form>
+            <label>
+                <H3> ¿Cambiar contraseña? </H3>
+            </label>
+            <form>
+                <fieldset>
+                    <label for="password_actual">Contraseña Actual
+                        <input type="password" name="password_actual" id="password_actual" required>
+                    </label>
+                    <label for="password_new">Nueva contraseña
+                        <input type="password" name="password_new" id="password_new" required></label>
+                    <label for="password_confirmar"> Confirmar nueva contraseña
+                        <input type="password" name="password_confirmar" id="password_confirmar" required></label>
+                </fieldset>
+                <button type="submit">Guardar cambios</button>
+            </form>
+        </section>
+        <section>
+            <div>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

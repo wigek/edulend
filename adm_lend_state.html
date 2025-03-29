@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="reportes" content="Reportes de usuarios">
+    <meta property="og:title" content="Página de reportes">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <title>Sistema de reportes</title>
+</head>
+
+<body class="reportes">
+    <header>
+        <h1>Edulend</h1>
+        <nav>
+            <ul>
+                <li><a href="adm_lend_state.html">Estado de prestamo de usuario</a></li>
+                <li><a href="receive_item.html">Recibo de equipos</a></li>
+                <li><a href="user_profile.html">Perfiles de usuario</a></li>
+                <li><a href="item_gestor.html">Gestión de articulos</a></li>
+                <li><a href="item_inventory.html">Inventario de articulos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Filtro de reportes</h2>
+            <label for="filtro-nombre">Nombre:</label>
+            <input type="text" placeholder="Buscar por nombre" id="filtro_nom" required><br><br>
+
+            <label for="filtro-fecha">Fecha de registro desde :</label>
+            <input type="date" id="filtro-fecha"><br><br>
+
+            <label for="filtro-estatus">Estado:</label>
+            <select id="filtro-estatus">
+                <option value="">Seleccione Estado</option>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select><br><br>
+            <button onclick="">Buscar</button>
+        </section>
+        <section>
+            <h2>Reportes de usuarios</h2>
+            <table id="tabla-reportes">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo Eléctronico</th>
+                    <th>Teléfono</th>
+                    <th>Acción</th>
+                </thead>
+                <tr>
+                    <td>Wilder</td>
+                    <td>Garica</td>
+                    <td>Wilder.garciaramirez@gmail.com</td>
+                    <td>3136980570</td>
+                    <td>
+                        <button type="button" class="editar">Editar</button>
+                        <button type="button" class="eliminar">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sara</td>
+                    <td>Puerta</td>
+                    <td>Exampol.gmail.com</td>
+                    <td>3136980570</td>
+                    <td>
+                        <button type="button" class="editar">Editar</button>
+                        <button type="button" class="eliminar">Eliminar</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <div>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

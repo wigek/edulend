@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="descripcion" content="Página inicio inventarios y prestamos"/>
+    <meta property="og:title" content="Página incio"/>
+    <meta property="og:image" content="./Images/computador.jpg"/>
+    <link rel="stylesheet" href="./asset/css/style.css"/>
+    <title>Inicio</title>
+</head>
+    <body class="inicio">
+        <header>
+            <h1>Inicio</h1>
+            <nav>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada"
+                target="_blank"
+                rel="noreferrer">Prestamos</a>
+                <!-- este es un link externo -->
+                <!-- el target hace que se te redirrecione a otra página sin que te saque
+                de la nuestra -->
+            </nav>
+        </header>
+        <p>Página de inicio acá ya veré que pondré más adelante</p>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Control de inventario </a></li>
+                <li><a href="prestamos.html">Agrega activos a tu inventario</a></li>
+                <li><a href="inventarios.html">Recibo de equipos en prestamos</a></li>
+                <li><a href="Modificar.html">Modificar usuario</a></li>
+                <li><a href="reportes.html">Reportes y estadisticas</a></li>
+                <li><a href="perfiles.html">Perfiles de usuaio</a></li>
+            </ul>
+        </nav>
+            <main>
+                <section>
+                    <div class="contenedor">
+                        <a download href="./Images/computador.jpg">
+                            <img 
+                            src="./Images/computador.jpg"
+                            title="Computador"  
+                            alt="Imagen de computador" width="150"></a>
+                            <!-- con el a la hacemos clicleable -->
+                        <a download href="./Images/libros.png"> 
+                            <img 
+                            src="./Images/libros.png" alt="Imagen libro"
+                            title="Libro" width="200"></a>  
+                    </div>
+                </section>
+                <section>
+                    <div class="contenedor">
+                        <h3 id="nosotros">¿Quienes somos?</h3>
+                        <p>En Cesde EduLend, somos una plataforma creada para
+                        facilitar el préstamo de computadoras y libros a estudiantes 
+                        y profesores de la comunidad educativa. Nuestro objetivo es asegurar 
+                        que todos tengan acceso a herramientas tecnológicas y 
+                        materiales académicos para enriquecer su aprendizaje.</p>
+                        <h4>Nuestra misión</h4>
+                        <p>Ser la plataforma líder en el ámbito educativo para la gestión
+                        e recursos académicos, garantizando un acceso fácil y seguro a computadoras
+                        y libros,  contribuyendo así al éxito académico de
+                        nuestros usuarios.</p>
+                        <h4>¿Por qué elegirnos?</h4>
+                        <ul>
+                            <li>Fácil acceso a recuersos educativos</li>
+                            <li>Control de inventario eficiente</li>
+                            <li>Atención al usuario dedicada</li>
+                        </u>
+                    </div>
+                </section>
+        <section>
+            <h4>Formulario de contacto</h4>
+            <form  action="/procesar_contacto" method="post">
+            <!-- faltar poner el action-->
+            <fieldset>
+                <legend>Información personal</legend>
+                <div>
+                    <label>Nombre: <input type="text"
+                        name="name"
+                        placeholder="Nombre" required
+                        >
+                    </label>
+                </div>
+                <label>Correo Electronico: 
+                    <input type="email" 
+                    name="Email"
+                    placeholder="Correo electronico" required
+                    >
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Información adicional</legend>
+                <div>
+                    <label>Teléfono <input type="tel"
+                        id="tel"
+                        placeholder="Número de telefono" required>
+                    </label>
+                </div>
+            </fieldset>
+            <button type="submit">Enviar Formulario</button>
+            <button type="reset">Borrar Formulario</button>
+        </form>
+        </section> 
+        
+    </main>
+    </body> 
+    <footer>
+        <p>Copyright 2023© El mejor sitio de prestamo para mejorar tu experiencia 
+            estudiantil</p>
+        <p>Contacto:
+        <a href="mailto:wilder.garciaramirez@gmail.com">Envíame un correo</a>
+        <a href="tel:+573136980570">Llamar por teléfono</a>
+        </p>
+        <p>Síguenos en:
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://twitter.com">Twitter</a> |
+            <a href="https://linkedin.com">LinkedIn</a>
+        </p>    
+    </footer>
+
+</html>

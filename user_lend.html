@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de prestamos</title>
+</head>
+<body>
+    <header>
+        <h1>Edulend</h1>
+        <nav>
+            <ul>
+                <li><a href="user_lend.html">Solicitar prestamo de articulos</a></li>
+                <li><a href="lend_state.html">Estado de prestamos</a></li>
+                <li><a href="user_data_config.html">Datos de usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Solicitar Prestamo de articulo</h2>
+            <form action="">
+                <label for="articulo">Articulo</label>
+                <select name="tipo_articulo" required>
+                        <option value="">Seleccione una opcion</option>
+                        <option value="">computador</option>
+                        <option value="">libro</option>
+                </select>
+                <label for="lend_date">Fecha de entrega de articulo</label>
+                <input type="date" required>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </section>
+        <section>
+            <div>
+              <a href="login.html">Cerrar sesión</a>
+            </div>
+        </section> 
+    </main>
+</body>
+</html>

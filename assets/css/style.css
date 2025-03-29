@@ -1,0 +1,23 @@
+.form label, .form input, .form button{
+    display:block; 
+    margin: 6px;
+    
+}
+
+.form input{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.form button{
+    width: 94%;
+    margin-top: 10px;
+
+}
+.form{
+    width:200px;
+    margin:auto;
+    border: solid 1px;
+    background-color: lightslategray;
+}
+
