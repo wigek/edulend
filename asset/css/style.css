@@ -1,142 +1,147 @@
-.form label,
-.form input,
-.form button {
-    display: block;
-    margin: 5%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.form input {
-    margin-bottom: 10px;
-    width: 82%;
+/* Root variables para mantener colores consistentes */
+:root {
+  --primary-color: #175ca1;      /* Azul claro */
+  --primary-light: #e6f3ff;      /* Fondo más suave */
+  --secondary-color: #2b6cb0;    /* Azul más fuerte para contrastes */
+  --text-color: #333;
+  --border-color: #cce0f5;
+  --background-color: #f7fafd;
 }
 
-
-.form button {
-    margin-top: 20px;
-    width: 85%;
+/* Body estilo base */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-.form {
-    width: 203px;
-    margin: auto;
-    border: solid 1px;
+/* Contenedores comunes */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* este es el de user.profile */
-.gestor body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  color: var(--secondary-color);
 }
 
-.gestor {
-    width: 50%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+/* Botones */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.gestor fieldset {
-    border: none;
-    margin-bottom: 15px;
+button:hover {
+  background-color: var(--secondary-color);
 }
 
-.gestor legend {
-    font-weight: bold;
-    color: #333;
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.gestor label {
-    display: block;
-    margin: 10px 0 5px;
+table th, table td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
 }
 
-.gestor input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+table th {
+  background-color: var(--primary-light);
+  color: var(--secondary-color);
 }
 
-.gestor button {
-    background: #49abfa;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
 }
 
-.gestor button:hover {
-    background: #218838;
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-/* Sistema de reportes. adm_lend */
-.reportes {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+a:hover {
+  text-decoration: underline;
 }
 
-.reportes table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* Tarjetas (opcional para secciones visuales) */
+.card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
-.reportes th,
-.reportes td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+.navbar {
+  background-color: var(--primary-light);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.reportes th {
-    background-color: #f2f2f2;
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.reportes button {
-    padding: 5px 10px;
-    margin: 2px;
-    cursor: pointer;
+/* Logo o título */
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
-.reportes .editar {
-    background-color: #4CAF50;
-    color: white;
+/* Enlaces */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.reportes .eliminar {
-    background-color: #f44336;
-    color: white;
-}
-/* Página de inicio */
-.inicio body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e90808;
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.inicio header {
-    background: #3e7e7e;
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    text-align: center;
-}
-
-.inicio nav{
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.inicio footer {
-    text-align: center;
-    padding: 10px;
-    background: #3e7e7e;
-    color: white;
+.navbar-links li a:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
