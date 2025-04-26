@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --azul: #3B82F6; 
+    --azul-hover: #3270d5;
+    --gris: #404040;
+}
+
+
+body{
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+.login-contenedor{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100vw;
+}
+
+.contenedor-formulario{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 150px;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.formulario-titulo{
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.formulario-titulo img{
+    filter: brightness(0) saturate(100%);
+}
+
+.formulario-titulo figcaption{
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gris);
+}
+
+.label-formulario{
+    color: var(--gris);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input-formulario{
+    /* border-radius: 20px; */
+    background-color: #E4E4E4;
+    width: 250px;
+    padding: 15px 5px 15px 28px;
+    border: none;
+    margin: 2px auto 15px;
+    font-size: 20px;
+}
+
+.link-formulario{
+    font-size: 15px;
+    color: var(--azul);
+    font-weight: 600;
+    width: 100%;
+    text-align: right;
+    margin-top: -12px;
+}
+
+.link-formulario:hover {
+    color: var(--azul-hover);
+}
+
+.mb-ultimo-elemento-formulario{
+    margin-bottom: 22px;
+}
+
+.enviar-formulario{
+    width: 100%;
+    padding: 15px 5px 15px 28px;
+    border: none;
+    background-color: var(--azul);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.enviar-formulario:hover {
+    background-color: var(--azul-hover);
+}
+
+.formulario-fondo{
+    width: 50dvw;
+    height: 100dvh;
+    position: absolute;
+    margin: 0;
+    transform: translateX(51%);
+    top: -8px;
+    transition: transform linear 1s;
+}
+
+.fondo-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

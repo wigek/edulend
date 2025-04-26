@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leanovid</title>
+
+    <meta name="description"
+        content="Gestor de prestamos para institucionesPlataforma de gestión de préstamos de computadoras, tablets y libros para instituciones educativas. Facilita el acceso a recursos tecnológicos y educativos para estudiantes, mejorando su experiencia académica con un sistema eficiente y fácil de usar.">
+    <meta name="keywords" content="Prestamos, gestor de prestamos para instituciones, gestor de inventarios">
+
+    <link rel="stylesheet" href="Styles/login.css">
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <main class="login-contenedor">
+        <section class="contenedor-formulario">
+            <form action="" class="formulario">
+                <figure class="formulario-titulo">
+                    <img src="Elementos/libro.svg" alt="">
+                    <figcaption>Leanovid</figcaption>
+                </figure>
+                <label class="label-formulario" for="usuario">Usuario</label>
+                <input class="input-formulario" placeholder="Ingrese su usuario" type="text" class="texto-formulario"
+                    required name="usuario">
+                <label class="label-formulario" for="contasenia">Contraseña</label>
+                <input class="input-formulario" placeholder="Ingrese su contraseña" type="password"
+                    class="texto-formulario" required name="contasenia">
+                <a class="link-formulario mb-ultimo-elemento-formulario" href="javascript:void(0)"
+                    data-hidde="iniciar-sesion">¿Olvidaste la
+                    Contraseña?</a>
+                <button class="enviar-formulario" type="submit">Iniciar sesión</button>
+                <span>¿Aún no tienes una cuenta? <a href="javascript:void(0)" data-registrarse="true"
+                        class="link-formulario">Registrate</a></span>
+            </form>
+
+            <form action="" class="formulario">
+                <figure class="formulario-titulo">
+                    <img src="Elementos/libro.svg" alt="">
+                    <figcaption>Leanovid</figcaption>
+                </figure>
+                <label class="label-formulario" for="nombre">Nombres</label>
+                <input class="input-formulario" placeholder="Ingrese su nombre" type="text" class="texto-formulario"
+                    required name="nombre">
+                <label class="label-formulario" for="emai">Email</label>
+                <input class="input-formulario" placeholder="Ingrese su email" type="password" class="texto-formulario"
+                    required name="emai">
+                <label class="label-formulario" for="cedula">Cédulal</label>
+                <input class="input-formulario" placeholder="Ingrese su cédula" type="password" class="texto-formulario"
+                    required name="cedula">
+                <label class="label-formulario" for="contasenia">Contraseña</label>
+                <input class="input-formulario mb-ultimo-elemento-formulario" placeholder="Ingrese su contraseña"
+                    type="password" class="texto-formulario" required name="contasenia">
+                <button class="enviar-formulario" type="submit">Registrarse</button>
+                <span>¿Ya tienes una cuenta? <a href="javascript:void(0)" data-registrarse="false"
+                        class="link-formulario">Inicia sesión</a></span>
+            </form>
+        </section>
+
+        <figure id="registrarse-iniciar-sesion" class="formulario-fondo" style="position: absolute;">
+            <img class="fondo-img" src="Elementos/fondo-login.jpg" alt="">
+        </figure>
+
+    </main>
+</body>
+
+</html>

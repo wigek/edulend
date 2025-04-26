@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+
+    <link href="https://unpkg.com/ionicons@3.0.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/perfilUsuario.css">
+    <script src="js/perfilUsuario.js"></script>
+</head>
+
+<body>
+    <main class="main-container">
+        <section class="left-sidebar">
+            <div class="inner">
+                <div class="user-profile">
+                    <figure class="user-image">
+                        <img src="https://gravatar.com/avatar/de84db04b0c7b43efdc840391ffe56ff">
+                    </figure>
+                    <div class="user-info">
+                        <p class="user-name">Daniela Desira</p>
+                        <p class="user-title">Front End Developer</p>
+                        <p class="user-location">
+                            <i class="icon ion-md-locate"></i> Bello
+                        </p>
+                    </div>
+                </div>
+                <nav class="main-menu">
+                    <p title="Editar perfil">
+                        <i class="icon ion-md-create"></i>
+                        <a href="editarUsuario.html">Editar Perfil</a>
+                    </p>
+                    <p title="Registrar libro">
+                        <i class="icon ion-md-book"></i>
+                        <a href="registrarElemento.html?libros=true">Registrar libro</a>
+                    </p>
+                    <p title="Registrar Dispositivo">
+                        <i class="icon ion-md-desktop"></i>
+                        <a href="registrarElemento.html?dispositivos=true">Registrar Dispositivo</a>
+                    </p>
+                </nav>
+            </div>
+            <div class="toggle-button"><i class="icon ion-md-arrow-dropleft"></i></div>
+        </section>
+        <section class="table-status">
+            <h1 class="status-title">Estado prestamos</h1>
+            <table class="status-container-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Fecha prestamo</th>
+                        <th>Fecha entrega</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Acer</p>
+                        </td>
+                        <td>
+                            <p>Computador</p>
+                        </td>
+                        <td>
+                            <p>12/04/2025</p>
+                        </td>
+                        <td>
+                            <p>27/04/2025</p>
+                        </td>
+                        <td>
+                            <p>Activo</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Samsung</p>
+                        </td>
+                        <td>
+                            <p>Tablet</p>
+                        </td>
+                        <td>
+                            <p>12/04/2025</p>
+                        </td>
+                        <td>
+                            <p>27/04/2025</p>
+                        </td>
+                        <td>
+                            <p>Activo</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Clean code</p>
+                        </td>
+                        <td>
+                            <p>Libro</p>
+                        </td>
+                        <td>
+                            <p>12/04/2025</p>
+                        </td>
+                        <td>
+                            <p>27/04/2025</p>
+                        </td>
+                        <td>
+                            <p>En mora</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
