@@ -1,0 +1,98 @@
+/* General */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #1d3557;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Secciones */
+main.gestor {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos */
+h3 {
+    color: #083c3c;
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+form fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;  /* Hace que todos los inputs ocupen el mismo ancho */
+    max-width: 500px;  /* Ajusta el máximo ancho para que no se extienda demasiado */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    margin-bottom: 15px; /* Asegura espacio entre campos */
+}
+
+/* Botón de guardar cambios */
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1d3557;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #457b9d;
+}
+
+/* Enlace de cerrar sesión */
+section div a {
+    color: #1d3557;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+section div a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+footer a {
+    color: #457b9d;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
