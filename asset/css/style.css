@@ -1,6 +1,4 @@
-.form label,
-.form input,
-.form button {
+/* .form label, .form input, .form button {
     display: block;
     margin: 5%;
 }
@@ -23,7 +21,7 @@
 }
 
 /* este es el de user.profile */
-.gestor body {
+/*.gestor body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
@@ -76,7 +74,7 @@
 }
 
 /* Sistema de reportes. adm_lend */
-.reportes {
+/*.reportes {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
@@ -114,7 +112,7 @@
     color: white;
 }
 /* Página de inicio */
-.inicio body {
+/*.inicio body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -139,4 +137,4 @@
     padding: 10px;
     background: #3e7e7e;
     color: white;
-}
+} */

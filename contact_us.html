@@ -6,49 +6,14 @@
     <meta name="descripcion" content="Página inicio inventarios y prestamos"/>
     <meta property="og:title" content="Página incio"/>
     <meta property="og:image" content="./Images/computador.jpg"/>
-    <link rel="stylesheet" href="./asset/css/style.css"/>
+    <link rel="stylesheet" href="/Styles/contact.css"/>
     <title>Inicio</title>
 </head>
     <body class="inicio">
         <header>
-            <h1>Inicio</h1>
-            <nav>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada"
-                target="_blank"
-                rel="noreferrer">Prestamos</a>
-                <!-- este es un link externo -->
-                <!-- el target hace que se te redirrecione a otra página sin que te saque
-                de la nuestra -->
-            </nav>
+            <h1>Nosotros</h1>
         </header>
-        <p>Página de inicio acá ya veré que pondré más adelante</p>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Control de inventario </a></li>
-                <li><a href="prestamos.html">Agrega activos a tu inventario</a></li>
-                <li><a href="inventarios.html">Recibo de equipos en prestamos</a></li>
-                <li><a href="Modificar.html">Modificar usuario</a></li>
-                <li><a href="reportes.html">Reportes y estadisticas</a></li>
-                <li><a href="perfiles.html">Perfiles de usuaio</a></li>
-            </ul>
-        </nav>
             <main>
-                <section>
-                    <div class="contenedor">
-                        <a download href="./Images/computador.jpg">
-                            <img 
-                            src="./Images/computador.jpg"
-                            title="Computador"  
-                            alt="Imagen de computador" width="150"></a>
-                            <!-- con el a la hacemos clicleable -->
-                        <a download href="./Images/libros.png"> 
-                            <img 
-                            src="./Images/libros.png" alt="Imagen libro"
-                            title="Libro" width="200"></a>  
-                    </div>
-                </section>
                 <section>
                     <div class="contenedor">
                         <h3 id="nosotros">¿Quienes somos?</h3>
@@ -70,10 +35,14 @@
                         </u>
                     </div>
                 </section>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Cerrar Sesión</a></li>
+                    </ul>
+                </nav>
         <section>
             <h4>Formulario de contacto</h4>
             <form  action="/procesar_contacto" method="post">
-            <!-- faltar poner el action-->
             <fieldset>
                 <legend>Información personal</legend>
                 <div>
