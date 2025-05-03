@@ -29,7 +29,7 @@
                 <input class="input-formulario" placeholder="Ingrese su contraseña" type="password"
                     class="texto-formulario" required name="contasenia">
                 <a class="link-formulario mb-ultimo-elemento-formulario" href="javascript:void(0)"
-                    data-hidde="iniciar-sesion">¿Olvidaste la
+                    data-show="recuperar-contraseña">¿Olvidaste la
                     Contraseña?</a>
                 <button class="enviar-formulario" type="submit">Iniciar sesión</button>
                 <span>¿Aún no tienes una cuenta? <a href="javascript:void(0)" data-registrarse="true"
@@ -63,6 +63,17 @@
             <img class="fondo-img" src="Elementos/fondo-login.jpg" alt="">
         </figure>
 
+        <dialog id="recuperar-contraseña" style="padding-bottom: 27px;">
+            <form action="elementosDisponibles.html" class="form">
+                <h2>Recuperar contraseña</h2>
+                <label for="email"></label>
+                <input type="email" name="Correo" id="" placeholder="Correo" required>
+                <button class="boton boton-aceptar" type="submit">Aceptar</button>
+                <a href="javascript:void(0)" data-hidde="recuperar-contraseña" class="boton boton-cancelar">
+                    Cancelar
+                </a>
+            </form>
+        </dialog>
     </main>
 </body>
 
