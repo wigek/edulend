@@ -113,7 +113,7 @@ button {
     position: absolute;
     margin: 0;
     transform: translateX(51%);
-    top: 0px;
+    top: -8px;
     transition: transform linear 1s;
 }
 
