@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario en Dialog</title>
+  <style>
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, button {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .acciones {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="document.getElementById('miDialogo').showModal()">Abrir formulario</button>
+
+  <dialog id="miDialogo">
+    <form method="dialog" id="formularioEntrega">
+      <label for="fechaEntrega">Fecha de entrega:</label>
+      <input type="date" id="fechaEntrega" name="fechaEntrega" required>
+
+      <div class="acciones">
+        <button type="submit">Enviar</button>
+        <button type="button" onclick="document.getElementById('miDialogo').close()">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script>
+    document.getElementById("formularioEntrega").addEventListener("submit", function(event) {
+      event.preventDefault(); // evitar que se cierre automáticamente
+      const fecha = document.getElementById("fechaEntrega").value;
+      alert("Fecha de entrega ingresada: " + fecha);
+      document.getElementById("miDialogo").close();
+    });
+  </script>
+
+</body>
+</html>

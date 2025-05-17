@@ -81,3 +81,36 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+label {
+    font-weight: bold;
+}
+input, button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

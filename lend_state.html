@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/navbar.css">
     <link rel="stylesheet" href="/Styles/lend_state.css">
+    <script src="js/lend_state.js"></script>
     <title>Estado de prestamo de activos de estudio</title>
 </head>
 
 <body>
     <header>
-         <nav class="navbar">
+        <nav class="navbar">
             <div class="nav-links">
                 <div class="logo"><img src="/Elementos/Logo.svg" alt="" width="200"></div>
                 <ul>
@@ -38,11 +39,42 @@
                     <th>01/03/2025</th>
                     <th>15/05/2025</th>
                     <th>
-                        <button type="button">Realizar entrega</button>
-                        <button type="button">Solicitar prórroga </button>
+                        <!-- *<button type="button" onclick="mostrarPopupEntrega()">Realizar entrega</button> -->
+
+
+
+                        <button onclick="document.getElementById('msjEntrega').showModal()">Realizar entrega</button>
+
+                        <dialog id="msjEntrega">
+                            <form method="dialog" id="formularioEntrega">
+                                <label for="fechaEntrega">Fecha de entrega:</label>
+                                <input type="date" name="fechaEntrega" required>
+
+                                <div class="acciones">
+                                    <button type="submit">Enviar</button>
+                                    <button type="button"
+                                        onclick="document.getElementById('msjEntrega').close()">Cancelar</button>
+                                </div>
+                            </form>
+                        </dialog>
+                        <button onclick="document.getElementById('msjProrroga').showModal()">Solicitar prorroga</button>
+
+                        <dialog id="msjProrroga">
+                            <form method="dialog" id="formularioEntrega">
+                                <label for="fechaEntrega">Fecha de Prorroga:</label>
+                                <input type="date" name="fechaEntrega" required>
+
+                                <div class="acciones">
+                                    <button type="submit">Enviar Solicitud</button>
+                                    <button type="button"
+                                        onclick="document.getElementById('msjProrroga').close()">Cancelar</button>
+                                </div>
+                            </form>
+                        </dialog>
                     </th>
                 </tr>
             </table>
+
         </section>
     </main>
     <footer>

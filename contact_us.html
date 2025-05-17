@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="descripcion" content="Página inicio inventarios y prestamos"/>
-    <meta property="og:title" content="Página incio"/>
-    <meta property="og:image" content="./Images/computador.jpg"/>
-    <link rel="stylesheet" href="/Styles/contact.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="descripcion" content="Página inicio inventarios y prestamos" />
+    <meta property="og:title" content="Página incio" />
+    <meta property="og:image" content="./Images/computador.jpg" />
+    <link rel="stylesheet" href="/Styles/navbar.css">
+    <link rel="stylesheet" href="/Styles/contact.css" />
     <title>Inicio</title>
 </head>
-    <body class="inicio">
-        <header>
+
+<body class="inicio">
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <div class="logo"><img src="/Elementos/Logo.svg" alt="" width="200"></div>
+                <ul>
+                    <li><a href="user_lend.html">Solicitar prestamo de articulos</a></li>
+                    <li><a href="lend_state.html">Estado de prestamos</a></li>
+                    <li><a href="user_data_config.html">Datos de usuario</a></li>
+                    <li><a href="contact_us.html">¿Quienes somos?</a></li>
+                    <li><a href="index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
             <h1>Nosotros</h1>
-        </header>
-            <main>
-                <section>
-                    <div class="contenedor">
-                        <h3 id="nosotros">¿Quienes somos?</h3>
-                        <p>En Cesde EduLend, somos una plataforma creada para
-                        facilitar el préstamo de computadoras y libros a estudiantes 
-                        y profesores de la comunidad educativa. Nuestro objetivo es asegurar 
-                        que todos tengan acceso a herramientas tecnológicas y 
-                        materiales académicos para enriquecer su aprendizaje.</p>
-                        <h4>Nuestra misión</h4>
-                        <p>Ser la plataforma líder en el ámbito educativo para la gestión
-                        e recursos académicos, garantizando un acceso fácil y seguro a computadoras
-                        y libros,  contribuyendo así al éxito académico de
-                        nuestros usuarios.</p>
-                        <h4>¿Por qué elegirnos?</h4>
-                        <ul>
-                            <li>Fácil acceso a recuersos educativos</li>
-                            <li>Control de inventario eficiente</li>
-                            <li>Atención al usuario dedicada</li>
-                        </u>
-                    </div>
-                </section>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Cerrar Sesión</a></li>
-                    </ul>
-                </nav>
+            <div class="contenedor">
+                <h3 id="nosotros">¿Quienes somos?</h3>
+                <p>En Cesde EduLend, somos una plataforma creada para
+                    facilitar el préstamo de computadoras y libros a estudiantes
+                    y profesores de la comunidad educativa. Nuestro objetivo es asegurar
+                    que todos tengan acceso a herramientas tecnológicas y
+                    materiales académicos para enriquecer su aprendizaje.</p>
+                <h4>Nuestra misión</h4>
+                <p>Ser la plataforma líder en el ámbito educativo para la gestión
+                    e recursos académicos, garantizando un acceso fácil y seguro a computadoras
+                    y libros, contribuyendo así al éxito académico de
+                    nuestros usuarios.</p>
+                <h4>¿Por qué elegirnos?</h4>
+                <ul>
+                    <li>Fácil acceso a recuersos educativos</li>
+                    <li>Control de inventario eficiente</li>
+                    <li>Atención al usuario dedicada</li>
+                    </u>
+            </div>
+        </section>
+
         <section>
             <h4>Formulario de contacto</h4>
-            <form  action="/procesar_contacto" method="post">
-            <fieldset>
-                <legend>Información personal</legend>
-                <div>
-                    <label>Nombre: <input type="text"
-                        name="name"
-                        placeholder="Nombre" required
-                        >
+            <form action="/procesar_contacto" method="post">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <div>
+                        <label>Nombre: <input type="text" name="name" placeholder="Nombre" required>
+                        </label>
+                    </div>
+                    <label>Correo Electronico:
+                        <input type="email" name="Email" placeholder="Correo electronico" required>
                     </label>
-                </div>
-                <label>Correo Electronico: 
-                    <input type="email" 
-                    name="Email"
-                    placeholder="Correo electronico" required
-                    >
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Información adicional</legend>
-                <div>
-                    <label>Teléfono <input type="tel"
-                        id="tel"
-                        placeholder="Número de telefono" required>
-                    </label>
-                </div>
-            </fieldset>
-            <button type="submit">Enviar Formulario</button>
-            <button type="reset">Borrar Formulario</button>
-        </form>
-        </section> 
-        
+                </fieldset>
+                <fieldset>
+                    <legend>Información adicional</legend>
+                    <div>
+                        <label>Teléfono <input type="tel" id="tel" placeholder="Número de telefono" required>
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar Formulario</button>
+                <button type="reset">Borrar Formulario</button>
+            </form>
+        </section>
+
     </main>
-    </body> 
-    <footer>
-        <p>Copyright 2023© El mejor sitio de prestamo para mejorar tu experiencia 
-            estudiantil</p>
-        <p>Contacto:
+</body>
+<footer>
+    <p>Copyright 2023© El mejor sitio de prestamo para mejorar tu experiencia
+        estudiantil</p>
+    <p>Contacto:
         <a href="mailto:wilder.garciaramirez@gmail.com">Envíame un correo</a>
         <a href="tel:+573136980570">Llamar por teléfono</a>
-        </p>
-        <p>Síguenos en:
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://twitter.com">Twitter</a> |
-            <a href="https://linkedin.com">LinkedIn</a>
-        </p>    
-    </footer>
+    </p>
+    <p>Síguenos en:
+        <a href="https://facebook.com">Facebook</a> |
+        <a href="https://twitter.com">Twitter</a> |
+        <a href="https://linkedin.com">LinkedIn</a>
+    </p>
+</footer>
 
 </html>
