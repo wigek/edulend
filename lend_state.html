@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/Styles/navbar.css">
     <link rel="stylesheet" href="/Styles/lend_state.css">
     <script src="js/lend_state.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Estado de prestamo de activos de estudio</title>
 </head>
 
@@ -48,7 +50,7 @@
                         <dialog id="msjEntrega">
                             <form method="dialog" id="formularioEntrega">
                                 <label for="fechaEntrega">Fecha de entrega:</label>
-                                <input type="date" name="fechaEntrega" required>
+                                <input type="date" id="fechaEntrega" name="fechaEntrega" required>
 
                                 <div class="acciones">
                                     <button type="submit">Enviar</button>
@@ -60,9 +62,9 @@
                         <button onclick="document.getElementById('msjProrroga').showModal()">Solicitar prorroga</button>
 
                         <dialog id="msjProrroga">
-                            <form method="dialog" id="formularioEntrega">
+                            <form method="dialog" id="formularioProrroga">
                                 <label for="fechaEntrega">Fecha de Prorroga:</label>
-                                <input type="date" name="fechaEntrega" required>
+                                <input type="date" id="fechaProrroga" name="fechaEntrega" required>
 
                                 <div class="acciones">
                                     <button type="submit">Enviar Solicitud</button>

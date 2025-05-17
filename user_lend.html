@@ -27,7 +27,7 @@
     <main>
         <section>
             <h2>Solicitar Prestamo de articulo</h2>
-            <form action="">
+            <form action="" id="formularioEntrega">
                 <label for="articulo">Articulo</label>
                 <select name="tipo_articulo" required>
                     <option value="">Seleccione una opcion</option>
@@ -49,6 +49,28 @@
         </p>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script>
+        document.getElementById("formularioEntrega").addEventListener("submit", function (event) {
+            event.preventDefault(); // evita que se envíe el formulario tradicionalmente
+            enviarFormulario(event);
+        });
+
+        function enviarFormulario(e) {
+
+            console.log(e)
+            Swal.fire({
+                title: "Solicitud enviada",
+                icon: "success",
+                draggable: true
+            });
+
+            e.target.reset();
+        }
+    </script>
 </body>
 
 </html>
