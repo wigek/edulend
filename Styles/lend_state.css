@@ -6,7 +6,11 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
+@media (width < 880px){
+    main section{
+        overflow-x: scroll;
+    }
+}
 /* Secciones */
 main section {
     background-color: #ffffff;

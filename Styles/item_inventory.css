@@ -6,12 +6,17 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
+@media (width < 880px){
+    main section{
+        overflow-x: scroll;
+    }
+}
 /* Secciones */
 main section {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
+
     margin-bottom: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
