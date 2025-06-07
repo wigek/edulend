@@ -36,7 +36,22 @@
             <a href="https://www.edulend.com/contacto">Contacto</a>
         </p>
     </footer>
+    <script>
+    // Obtener la URL actual sin parámetros ni hash
+    const urlActual = window.location.pathname.split('/').pop();
 
+    // Seleccionar todos los enlaces dentro del navbar
+    const enlaces = document.querySelectorAll('.nav-links ul li a');
+
+    enlaces.forEach(enlace => {
+        // Obtener href solo con el nombre del archivo para comparar
+        const href = enlace.getAttribute('href');
+
+        if (href === urlActual) {
+        enlace.classList.add('active');
+        }
+    });
+    </script>
 </body>
 
 

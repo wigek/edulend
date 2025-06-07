@@ -25,4 +25,37 @@ function Init(){
             }
         })
     });
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+
+    const formulario = document.querySelector('.formulario');
+
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const usuario = document.querySelector('input[name="usuario"]').value;
+        const contrasenia = document.querySelector('input[name="contasenia"]').value;
+
+        if (usuario == "admin"  && contrasenia == "admin"){ 
+            document.location.replace("adm_panel.html")
+        } else if (usuario == "usuario"  && contrasenia == "usuario") {
+            document.location.replace("user_panel.html")
+        } else {
+            Toast.fire({
+                icon: "error",
+                title: "Usuario incorrecto"
+            });
+
+        }
+    });
 }

@@ -92,3 +92,14 @@
       width: 100%;
     }
   }
+
+  .nav-links ul li a.active {
+  color: #4DB6AC;          /* Color diferente para el enlace activo */
+  font-weight: 700;        /* Más destacado */
+  pointer-events: none;    /* Evita que se pueda clickear la misma pestaña */
+}
+
+.nav-links ul li a.active::after {
+  background-color: #4DB6AC;  /* Línea de color distinto para activo */
+  width: 100%;
+}
