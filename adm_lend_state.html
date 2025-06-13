@@ -34,19 +34,30 @@
     <main>
         <section>
             <h2>Filtro de reportes</h2>
-            <label for="filtro-nombre">Nombre:</label>
-            <input type="text" placeholder="Buscar por nombre" id="filtro_nom" required><br><br>
+            <form id="form-filtro">
+                <div>
+                    <label for="filtro-nombre">Nombre:</label>
+                    <input type="text" placeholder="Buscar por nombre" id="filtro_nom" required>
+                </div>
 
-            <label for="filtro-fecha">Fecha de registro desde :</label>
-            <input type="date" id="filtro-fecha"><br><br>
+                <div>
+                    <label for="filtro-fecha">Fecha de registro desde :</label>
+                    <input type="date" id="filtro-fecha">
+                </div>
 
-            <label for="filtro-estatus">Estado:</label>
-            <select id="filtro-estatus">
-                <option value="">Seleccione Estado</option>
-                <option value="activo">Activo</option>
-                <option value="inactivo">Inactivo</option>
-            </select><br><br>
-            <button onclick="">Buscar</button>
+                <div>
+                    <label for="filtro-estatus">Estado:</label>
+                    <select id="filtro-estatus">
+                        <option value="">Seleccione Estado</option>
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
         </section>
         <section>
             <h2>Reportes de usuarios</h2>

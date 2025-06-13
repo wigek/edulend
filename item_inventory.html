@@ -10,6 +10,7 @@
     <title>Inventarios</title>
     <link rel="stylesheet" href="/Styles/navbar.css" />
     <link rel="stylesheet" href="/Styles/item_inventory.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -31,17 +32,29 @@
     </header>
     <main>
         <section>
-            <h2>Agregar nuevo articulo</h2>
-            <form class="form">
-                <label for="articulo">Nombre del producto</label>
-                <input type="text" id="articulo" name="articulo" required>
+            <h2>Agregar nuevo artículo</h2>
+            <form class="form-horizontal">
+                <div>
+                    <label for="articulo">Nombre del producto</label>
+                    <input type="text" id="articulo" name="articulo" required>
+                </div>
 
-                <label for="cantidad">Cantidad de artículos</label>
-                <input type="number" name="cantidad" id="cantidad" required>
+                <div>
+                    <label for="cantidad">Cantidad de artículos</label>
+                    <input type="number" id="cantidad" name="cantidad" required>
+                </div>
 
-                <button type="submit">Agregar producto al inventario</button>
+                <div class="btn-container">
+                    <button type="submit">
+                    <i data-lucide="plus" style="vertical-align: middle;"></i>
+                    <span style="margin-left: 6px;">Agregar producto al inventario</span>
+                    </button>
+
+                </div>
             </form>
         </section>
+
+
         <!-- agregar los productos -->
         <section>
             <h2>Inventario actual</h2>
@@ -95,6 +108,10 @@
             }
         });
     </script>
+    <script>
+    lucide.createIcons();
+    </script>
+
 </body>
 
 </html>

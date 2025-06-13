@@ -76,3 +76,37 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+main section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto; /* centrado horizontal */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 500px; /* ajusta el ancho del formulario */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centrar el h2 */
+main section h2 {
+    text-align: center;
+    width: 100%;
+}
+
+/* Formulario alineado */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inputs y selects alineados */
+form label,
+form select,
+form input[type="date"] {
+    width: 100%;
+    max-width: 400px;
+}

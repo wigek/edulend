@@ -120,3 +120,55 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.form-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.form-horizontal div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 220px;
+}
+
+.form-horizontal label {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-horizontal input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+}
+
+.form-horizontal button {
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-horizontal button:hover {
+    background-color: #457b9d;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1d3557;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}

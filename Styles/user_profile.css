@@ -7,22 +7,24 @@ body {
     padding: 20px;
 }
 
-/* Secciones */
+/* Sección principal centrada */
 main.gestor {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Contenedor del contenido dentro del gestor */
+main.gestor section {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Títulos */
-h3 {
-    color: #083c3c;
-    margin-bottom: 10px;
-}
-
-/* Formulario */
+/* Fieldsets */
 form fieldset {
     border: 1px solid #ddd;
     padding: 20px;
@@ -30,6 +32,15 @@ form fieldset {
     border-radius: 8px;
 }
 
+/* Títulos */
+legend, h3 {
+    color: #083c3c;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Formulario */
 form label {
     display: block;
     margin-top: 15px;
@@ -40,13 +51,13 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
-    width: 100%;  /* Hace que todos los inputs ocupen el mismo ancho */
-    max-width: 500px;  /* Ajusta el máximo ancho para que no se extienda demasiado */
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #fdfdfd;
-    margin-bottom: 15px; /* Asegura espacio entre campos */
+    margin-bottom: 15px;
 }
 
 /* Botón de guardar cambios */
@@ -59,6 +70,7 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
 }
 
 form button:hover {
