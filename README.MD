@@ -19,14 +19,23 @@ Este repositorio contiene el **frontend** del proyecto, desarrollado en **HTML, 
 ## 📂 Estructura del proyecto
 
 Proyecto/
+
 ├── controllers/
+
 ├── models/
+
 ├── views/ # Vistas HTML
+
 ├── public/
+
 │ ├── css/ # Estilos personalizados
+
 │ ├── js/ # Scripts (animaciones, gráficos, navbar activo)
+
 ├── index.html # Página principal / Login
+
 ├── .gitignore # Archivos ignorados en Git
+
 └── README.md # Documentación del proyecto
 
 yaml
@@ -64,11 +73,17 @@ receive_item.html – Registro de devoluciones
 📂 Organización modular de recursos según patrón MVC
 
 📌 Estado del proyecto
+
 🚧 En desarrollo: actualmente se trabaja en la integración de las vistas y animaciones.
+
 👉 Futuro objetivo: conectar el frontend con una API backend.
 
 👨‍💻 Autores
+
 Carlos Perez
+
 Alejandra Alvarez
+
 Jean Medina
+
 Wilder Garcia
