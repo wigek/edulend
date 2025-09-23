@@ -38,10 +38,7 @@ Proyecto/
 
 └── README.md # Documentación del proyecto
 
-yaml
-Copiar código
 
----
 
 ## ⚙️ Instalación y uso
 1. Clonar el repositorio:
@@ -54,7 +51,9 @@ Iniciar un servidor local (ejemplo con VSCode Live Server).
 Abrir en el navegador:
 👉 http://localhost:5500/index.html
 
-🖼️ Vistas principales
+
+## 🖼️ Vistas principales
+
 index.html – Login / Logout (acceso al sistema)
 
 dashboard.html – Resumen general con métricas y gráficas
@@ -63,7 +62,9 @@ lend_state.html – Seguimiento de préstamos por usuario
 
 receive_item.html – Registro de devoluciones
 
-✨ Funcionalidades
+
+## ✨ Funcionalidades
+
 🎨 Interfaz responsiva y moderna con TailwindCSS
 
 🧭 Navbar dinámica con resaltado de la vista activa
@@ -78,7 +79,8 @@ receive_item.html – Registro de devoluciones
 
 👉 Futuro objetivo: conectar el frontend con una API backend.
 
-👨‍💻 Autores
+
+## 👨‍💻 Autores
 
 Carlos Perez
 
