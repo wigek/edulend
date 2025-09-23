@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/Styles/navbar.css">
+    <link rel="stylesheet" href="/public/Styles/user_lend.css">
+    <title>Estado de prestamos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <div class="logo"><img src="/public/Logo.svg" alt="" width="200"></div>
+                <ul>
+                    <li><a href="/views/user_lend.html">Solicitar prestamo de articulos</a></li>
+                    <li><a href="/views/lend_state.html">Estado de prestamos</a></li>
+                    <li><a href="/views/user_profile.html">Perfil de usuario</a></li>
+                    <li><a href="/views/user_data_config.html">Datos de usuario</a></li>
+                    <li><a href="/views/contact_us.html">¿Quienes somos?</a></li>
+                    <li><a href="/index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Solicitar Prestamo de articulo</h2>
+            <form action="" id="formularioEntrega">
+                <label for="articulo">Articulo</label>
+                <select name="tipo_articulo" required>
+                    <option value="">Seleccione una opcion</option>
+                    <option value="">computador</option>
+                    <option value="">libro</option>
+                </select>
+                <label for="lend_date">Fecha de entrega de articulo</label>
+                <input type="date" required>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 EduLend. Todos los derechos reservados.</p>
+        <p>
+            <a href="https://www.edulend.com/terminos">Términos</a> |
+            <a href="https://www.edulend.com/privacidad">Privacidad</a> |
+            <a href="https://www.edulend.com/contacto">Contacto</a>
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script>
+        document.getElementById("formularioEntrega").addEventListener("submit", function (event) {
+            event.preventDefault(); // evita que se envíe el formulario tradicionalmente
+            enviarFormulario(event);
+        });
+
+        function enviarFormulario(e) {
+
+            console.log(e)
+            Swal.fire({
+                title: "Solicitud enviada",
+                icon: "success",
+                draggable: true
+            });
+
+            e.target.reset();
+        }
+    </script>
+    <script>
+        const urlActual = window.location.pathname;
+
+        const enlaces = document.querySelectorAll('.nav-links ul li a');
+
+        enlaces.forEach(enlace => {
+            const href = enlace.getAttribute('href');
+            if (urlActual.endsWith(href)) {
+                enlace.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

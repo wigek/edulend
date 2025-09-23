@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/Styles/navbar.css">
+    <link rel="stylesheet" href="/public/Styles/user_profile.css">
+    <title>Gestion De Usuario</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <div class="logo"><img src="/public/Logo.svg" alt="" width="200"></div>
+            <ul>
+                <li><a href="/views/user_lend.html">Solicitar prestamo de articulos</a></li>
+                <li><a href="/views/lend_state.html">Estado de prestamos</a></li>
+                <li><a href="/views/user_profile.html">Perfil de usuario</a></li>
+                <li><a href="/views/user_data_config.html">Datos de usuario</a></li>
+                <li><a href="/views/contact_us.html">¿Quienes somos?</a></li>
+                <li><a href="/index.html">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <main class="gestor">
+        <section>
+            <form action="">
+                <fieldset>
+                    <legend>Informacion personal</legend>
+                    <label>Nombre:
+                        <input type="text" name="nombre">
+                    </label>
+                    <label>Apellido:
+                        <input type="text" name="apellido">
+                    </label>
+                    <label>Dirección
+                        <input type="text" name="direccion">
+                    </label>
+                    <label>Correo Electronico:
+                        <input type="email" name="email">
+                    </label>
+                </fieldset>
+            </form>
+            <label>
+                <H3> ¿Cambiar contraseña? </H3>
+            </label>
+            <form>
+                <fieldset>
+                    <label for="password_actual">Contraseña Actual
+                        <input type="password" name="password_actual" id="password_actual" required>
+                    </label>
+                    <label for="password_new">Nueva contraseña
+                        <input type="password" name="password_new" id="password_new" required></label>
+                    <label for="password_confirmar"> Confirmar nueva contraseña
+                        <input type="password" name="password_confirmar" id="password_confirmar" required></label>
+                </fieldset>
+                <button type="submit">Guardar cambios</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 EduLend. Todos los derechos reservados.</p>
+        <p>
+            <a href="https://www.edulend.com/terminos">Términos</a> |
+            <a href="https://www.edulend.com/privacidad">Privacidad</a> |
+            <a href="https://www.edulend.com/contacto">Contacto</a>
+        </p>
+    </footer>
+    <script>
+        const urlActual = window.location.pathname;
+
+        const enlaces = document.querySelectorAll('.nav-links ul li a');
+
+        enlaces.forEach(enlace => {
+            const href = enlace.getAttribute('href');
+            if (urlActual.endsWith(href)) {
+                enlace.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

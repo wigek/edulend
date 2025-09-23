@@ -47,9 +47,9 @@ function Init(){
         const contrasenia = document.querySelector('input[name="contasenia"]').value;
 
         if (usuario == "admin"  && contrasenia == "admin"){ 
-            document.location.replace("dashboard.html")
+            document.location.replace("/views/dashboard.html")
         } else if (usuario == "usuario"  && contrasenia == "usuario") {
-            document.location.replace("contact_us.html")
+            document.location.replace("/views/user_panel.html")
         } else {
             Toast.fire({
                 icon: "error",
