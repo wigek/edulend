@@ -1,61 +1,111 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded and parsed");
-    Init()
+    Init();
 });
 
-function Init(){
-    const fondoFormulario = document.getElementById("registrarse-iniciar-sesion")
+function Init() {
+    const fondoFormulario = document.getElementById("registrarse-iniciar-sesion");
     const actionModal = document.querySelectorAll("a");
 
-    actionModal.forEach(e => {
-        e.addEventListener("click", e => {
-
-            if(e.target.dataset.registrarse == "true"){
-                fondoFormulario.style.transform = 'translateX(-51%)';
-            }
-            else{
-                fondoFormulario.style.transform = 'translateX(51%)';
+    actionModal.forEach(a => {
+        a.addEventListener("click", e => {
+            if (e.target.dataset.registrarse === "true") {
+                fondoFormulario.style.transform = "translateX(-51%)";
+            } else if (e.target.dataset.registrarse === "false") {
+                fondoFormulario.style.transform = "translateX(51%)";
             }
 
-            if(e.target.dataset.show){
-                document.querySelector(`#${e.target.dataset.show}`).showModal()
-            }
-            else if(e.target.dataset.hidde){
+            
+            if (e.target.dataset.show) {
+                document.querySelector(`#${e.target.dataset.show}`).showModal();
+            } else if (e.target.dataset.hidde) {
                 document.querySelector(`#${e.target.dataset.hidde}`).close();
             }
-        })
+        });
     });
 
+   
     const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
         showConfirmButton: false,
         timer: 3000,
         timerProgressBar: true,
-        didOpen: (toast) => {
+        didOpen: toast => {
             toast.onmouseenter = Swal.stopTimer;
             toast.onmouseleave = Swal.resumeTimer;
         }
     });
 
-    const formulario = document.querySelector('.formulario');
+    const formLogin = document.querySelectorAll(".formulario")[0];
+    formLogin.addEventListener("submit", e => {
+        e.preventDefault();
 
-    formulario.addEventListener('submit', function(event) {
-        event.preventDefault();
+        const usuario = formLogin.querySelector('input[name="usuario"]').value;
+        const contrasenia = formLogin.querySelector('input[name="contasenia"]').value;
 
-        const usuario = document.querySelector('input[name="usuario"]').value;
-        const contrasenia = document.querySelector('input[name="contasenia"]').value;
+        const usuarioGuardado = JSON.parse(localStorage.getItem(usuario));
 
-        if (usuario == "admin"  && contrasenia == "admin"){ 
-            document.location.replace("/views/dashboard.html")
-        } else if (usuario == "usuario"  && contrasenia == "usuario") {
-            document.location.replace("/views/user_panel.html")
-        } else {
+       
+        if (usuarioGuardado && usuario === usuarioGuardado.email && contrasenia === usuarioGuardado.contrasenia) {
+            Swal.fire({
+                icon: "success",
+                title: "Inicio de sesión exitoso",
+                text: "Bienvenido a EduLend",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            setTimeout(() => {
+                window.location.href = "elementosDisponibles.html";
+            }, 1600);
+        } 
+        
+        else if (usuario === "admin" && contrasenia === "admin") {
+            document.location.replace("/views/dashboard.html");
+        } else if (usuario === "usuario" && contrasenia === "usuario") {
+            document.location.replace("/views/user_panel.html");
+        } 
+        
+        else {
             Toast.fire({
                 icon: "error",
-                title: "Usuario incorrecto"
+                title: "Usuario o contraseña incorrectos"
             });
-
         }
+    });
+
+
+    const formRegistro = document.querySelectorAll(".formulario")[1];
+    formRegistro.addEventListener("submit", e => {
+        e.preventDefault();
+        debugger;
+        const nombre = formRegistro.querySelector('input[name="nombre"]').value;
+        const email = formRegistro.querySelector('input[name="email"]').value;
+        const cedula = formRegistro.querySelector('input[name="cedula"]').value;
+        const contrasenia = formRegistro.querySelector('input[name="contasenia"]').value;
+
+        const usuario = { nombre, email, cedula, contrasenia };
+
+        if (localStorage.getItem(email)) {
+            Swal.fire({
+                icon: "error",
+                title: "Error de registro",
+                text: "El correo electrónico ya está registrado",
+                confirmButtonText: "Aceptar"
+            });
+            return;
+        }
+
+        localStorage.setItem(email, JSON.stringify(usuario));
+
+        Swal.fire({
+            icon: "success",
+            title: "Registro exitoso",
+            text: "Ahora puedes iniciar sesión con tus datos",
+            confirmButtonText: "Aceptar"
+        });
+
+        formRegistro.reset();
+        fondoFormulario.style.transform = "translateX(51%)"; // vuelve al login
     });
 }
