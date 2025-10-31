@@ -93,24 +93,23 @@ function Init() {
         const usuario = { nombre, email, cedula, celular, contrasenia };
 
         if (localStorage.getItem(email)) {
-            Swal.fire({
+
+            Toast.fire({
                 icon: "error",
                 title: "Error de registro",
-                text: "El correo electrónico ya está registrado",
-                confirmButtonText: "Aceptar"
+                text: `El correo electrónico ${usuario.email} ya está registrado`
             });
             return;
         }
 
         localStorage.setItem(email, JSON.stringify(usuario));
 
-        Swal.fire({
+
+        Toast.fire({
             icon: "success",
             title: "Registro exitoso",
             text: "Ahora puedes iniciar sesión con tus datos",
-            confirmButtonText: "Aceptar"
         });
-
         formRegistro.reset();
         fondoFormulario.style.transform = "translateX(51%)"; // vuelve al login
     });
