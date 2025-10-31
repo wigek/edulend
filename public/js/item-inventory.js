@@ -2,10 +2,9 @@
 const form = document.querySelector('.form-horizontal');
 const tabla = document.querySelector('#tabla-inventario tbody');
 
-// Cargar inventario desde localStorage al iniciar
+// Cargar inventario desde localStorage
 document.addEventListener('DOMContentLoaded', mostrarInventario);
 
-// Escuchar el envío del formulario
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -30,7 +29,7 @@ form.addEventListener('submit', (e) => {
     mostrarInventario();
 });
 
-// Función para calcular una fecha límite (por ejemplo, 7 días después)
+// Función para calcular una fecha límite (7 días)
 function calcularFechaEntrega() {
     const fecha = new Date();
     fecha.setDate(fecha.getDate() + 7);
@@ -73,7 +72,7 @@ function eliminarItem(index) {
     mostrarInventario();
 }
 
-// (Opcional) Editar un artículo
+// Editar un artículo
 function editarItem(index) {
     const inventario = JSON.parse(localStorage.getItem('inventario')) || [];
     const item = inventario[index];
