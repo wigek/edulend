@@ -53,7 +53,7 @@
 
         <section>
             <h4>Formulario de contacto</h4>
-            <form action="/procesar_contacto" method="post">
+            <form id="formContacto">
                 <fieldset>
                     <legend>Información personal</legend>
                     <div>
@@ -61,13 +61,13 @@
                         </label>
                     </div>
                     <label>Correo Electronico:
-                        <input type="email" name="Email" placeholder="Correo electronico" required>
+                        <input type="email" name="email" placeholder="Correo electronico" required>
                     </label>
                 </fieldset>
                 <fieldset>
                     <legend>Información adicional</legend>
                     <div>
-                        <label>Teléfono <input type="tel" id="tel" placeholder="Número de telefono" required>
+                        <label>Teléfono <input type="tel" id="tel" name="tel" placeholder="Número de telefono" required>
                         </label>
                     </div>
                 </fieldset>
@@ -103,5 +103,9 @@
         <a href="https://linkedin.com">LinkedIn</a>
     </p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/config.js"></script>
+<script src="/public/js/controller/contact_us.js"></script>
 
 </html>
