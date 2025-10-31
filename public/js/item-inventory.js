@@ -16,9 +16,34 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
+    const emailUsuario = localStorage.getItem("usuarioActual");
+
+    if (!emailUsuario) {
+        Toast.fire({
+            icon: "error",
+            title: "No hay un usuario activo",
+            text: "Inicia sesión antes de registrar un préstamo"
+        });
+        return;
+    }
+
+    // 2️⃣ Buscar los datos del usuario
+    const usuarioDatos = JSON.parse(localStorage.getItem(emailUsuario));
+    if (!usuarioDatos) {
+        Toast.fire({
+            icon: "error",
+            title: "Datos de usuario no encontrados",
+            text: "Verifica tu registro o sesión"
+        });
+        return;
+    }
+
+
     const nuevoItem = {
         articulo,
         cantidad,
+        cedula: usuarioDatos.cedula,
+        nombre: usuarioDatos.nombre,
         fechaIngreso: new Date().toLocaleDateString(),
         fechaEntrega: calcularFechaEntrega(),
         estado: 'En buen estado'

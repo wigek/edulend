@@ -75,9 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
             articulo: articuloTexto,
             fechaEntrega,
             nombre: usuarioDatos.nombre || "",
-            apellido: usuarioDatos.apellido || "",
+            cedula: usuarioDatos.cedula,
             correo: usuarioDatos.email,
-            celular: usuarioDatos.celular || ""
+            celular: usuarioDatos.celular || "",
+            fechaIngreso: new Date().toLocaleDateString(),
         };
 
         // 5️⃣ Guardar en localStorage
