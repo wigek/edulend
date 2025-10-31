@@ -28,23 +28,21 @@
     <main>
         <section>
             <h2>Datos de usuario</h2>
-            <table>
-                <tr>
-                    <th>Tipo documento</th>
-                    <th>Documento</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>email</th>
-                    <th>telefono</th>
-                </tr>
-                <tr>
-                    <td>Cedula de ciudadania</td>
-                    <td>1232164652</td>
-                    <td>Arnulfo</td>
-                    <td>Canselmo</td>
-                    <td>arnulfocanselmo@correo.net</td>
-                    <td>312-000-0000</td>
-                </tr>
+            <table id="tablaUsuario">
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyUsuario">
+                    <tr>
+                        <td colspan="6">Cargando datos...</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </main>
@@ -56,6 +54,10 @@
             <a href="https://www.edulend.com/contacto">Contacto</a>
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/public/js/controller/user_data_config_controller.js"></script>
+
     <script>
         const urlActual = window.location.pathname;
 
