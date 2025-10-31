@@ -29,7 +29,7 @@ function Init() {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1550,
         timerProgressBar: true,
         didOpen: toast => {
             toast.onmouseenter = Swal.stopTimer;
@@ -48,24 +48,25 @@ function Init() {
 
        
         if (usuarioGuardado && usuario === usuarioGuardado.email && contrasenia === usuarioGuardado.contrasenia) {
-            Swal.fire({
+            Toast.fire({
                 icon: "success",
                 title: "Inicio de sesión exitoso",
-                text: "Bienvenido a EduLend",
-                showConfirmButton: false,
-                timer: 1500
+                text: "Bienvenido a EduLend, " + usuario
             });
             setTimeout(() => {
-                window.location.href = "elementosDisponibles.html";
+                window.location.href = "/views/user_panel.html";
             }, 1600);
         } 
-        
-        else if (usuario === "admin" && contrasenia === "admin") {
-            document.location.replace("/views/dashboard.html");
-        } else if (usuario === "usuario" && contrasenia === "usuario") {
-            document.location.replace("/views/user_panel.html");
-        } 
-        
+        else if (usuario.includes("admin") && contrasenia.includes("admin")) {
+            Toast.fire({
+                icon: "success",
+                title: "Inicio de sesión exitoso",
+                text: "Bienvenido a EduLend, " + usuario
+            });
+            setTimeout(() => {
+                document.location.replace("/views/dashboard.html");
+            }, 1600);
+        }         
         else {
             Toast.fire({
                 icon: "error",
