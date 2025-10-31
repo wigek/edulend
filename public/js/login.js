@@ -87,9 +87,10 @@ function Init() {
         const nombre = formRegistro.querySelector('input[name="nombre"]').value;
         const email = formRegistro.querySelector('input[name="email"]').value;
         const cedula = formRegistro.querySelector('input[name="cedula"]').value;
+        const celular = formRegistro.querySelector('input[name="celular"]').value;
         const contrasenia = formRegistro.querySelector('input[name="contasenia"]').value;
 
-        const usuario = { nombre, email, cedula, contrasenia };
+        const usuario = { nombre, email, cedula, celular, contrasenia };
 
         if (localStorage.getItem(email)) {
             Swal.fire({

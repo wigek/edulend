@@ -68,24 +68,7 @@
                     <th>Acción</th>
                 </thead>
                 <tr>
-                    <td>Wilder</td>
-                    <td>Garcia</td>
-                    <td>Wilder.garciaramirez@gmail.com</td>
-                    <td>3136980570</td>
-                    <td>
-                        <button type="button" class="editar">Editar</button>
-                        <button type="button" class="eliminar">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sara</td>
-                    <td>Puerta</td>
-                    <td>Exampol.gmail.com</td>
-                    <td>3136980570</td>
-                    <td>
-                        <button type="button" class="editar">Editar</button>
-                        <button type="button" class="eliminar">Eliminar</button>
-                    </td>
+
                 </tr>
             </table>
         </section>
@@ -99,78 +82,7 @@
         </p>
     </footer>
 
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Buscar todos los botones con la clase "eliminar"
-            const botonesEliminar = document.querySelectorAll(".eliminar");
-
-            botonesEliminar.forEach(boton => {
-                boton.addEventListener("click", function () {
-                    const fila = this.closest("tr");
-                    if (fila) fila.remove();
-
-                });
-            });
-
-
-            const botonesEditar = document.querySelectorAll(".editar");
-
-            botonesEditar.forEach(boton => {
-                boton.addEventListener("click", function () {
-                    const fila = this.closest("tr");
-                    const celdas = fila.querySelectorAll("td");
-
-                    // Obtener los valores actuales
-                    const nombre = celdas[0].textContent;
-                    const apellido = celdas[1].textContent;
-                    const correo = celdas[2].textContent;
-                    const telefono = celdas[3].textContent;
-
-                    Swal.fire({
-                        title: 'Editar información',
-                        html:
-                            `<input id="swal-nombre" class="swal2-input" placeholder="Nombre" value="${nombre}">
-                            <input id="swal-apellido" class="swal2-input" placeholder="Apellido" value="${apellido}">
-                            <input id="swal-correo" class="swal2-input" placeholder="Correo" value="${correo}">
-                            <input id="swal-telefono" class="swal2-input" placeholder="Teléfono" value="${telefono}">`,
-                        confirmButtonText: 'Guardar',
-                        showCancelButton: true,
-                        focusConfirm: false,
-                        preConfirm: () => {
-                            const nuevoNombre = document.getElementById('swal-nombre').value;
-                            const nuevoApellido = document.getElementById('swal-apellido').value;
-                            const nuevoCorreo = document.getElementById('swal-correo').value;
-                            const nuevoTelefono = document.getElementById('swal-telefono').value;
-
-                            // Validación básica
-                            if (!nuevoNombre || !nuevoApellido || !nuevoCorreo || !nuevoTelefono) {
-                                Swal.showValidationMessage('Todos los campos son obligatorios');
-                                return false;
-                            }
-
-                            return { nuevoNombre, nuevoApellido, nuevoCorreo, nuevoTelefono };
-                        }
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-
-                            celdas[0].textContent = result.value.nuevoNombre;
-                            celdas[1].textContent = result.value.nuevoApellido;
-                            celdas[2].textContent = result.value.nuevoCorreo;
-                            celdas[3].textContent = result.value.nuevoTelefono;
-
-                            Swal.fire('Actualizado', 'La fila fue actualizada con éxito.', 'success');
-                        }
-                    });
-                });
-            });
-
-
-
-
-        });
-
-    </script>
+    <script src="/public/js/controller/adm_lend_state_controller.js"></script>
     <script>
         const urlActual = window.location.pathname;
 
