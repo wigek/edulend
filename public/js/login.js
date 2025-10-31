@@ -54,7 +54,7 @@ function Init() {
                 text: "Bienvenido a EduLend, " + usuario
             });
             setTimeout(() => {
-                window.location.href = "/views/user_panel.html";
+                window.location.href = "/views/user_lend.html";
             }, 1600);
         } 
         else if (usuario.includes("admin") && contrasenia.includes("admin")) {
