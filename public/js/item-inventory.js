@@ -77,13 +77,44 @@ function editarItem(index) {
     const inventario = JSON.parse(localStorage.getItem('inventario')) || [];
     const item = inventario[index];
 
-    const nuevoNombre = prompt('Nuevo nombre del artículo:', item.articulo);
-    const nuevaCantidad = prompt('Nueva cantidad:', item.cantidad);
+    Swal.fire({
+        title: 'Editar artículo',
+        html: `
+            <input id="swal-articulo" class="swal2-input" placeholder="Nombre del artículo" value="${item.articulo}">
+            <input id="swal-cantidad" type="number" class="swal2-input" placeholder="Cantidad" value="${item.cantidad}">
+        `,
+        confirmButtonText: 'Guardar cambios',
+        cancelButtonText: 'Cancelar',
+        showCancelButton: true,
+        focusConfirm: false,
+        preConfirm: () => {
+            const nuevoNombre = document.getElementById('swal-articulo').value.trim();
+            const nuevaCantidad = parseInt(document.getElementById('swal-cantidad').value.trim());
 
-    if (nuevoNombre && nuevaCantidad) {
-        item.articulo = nuevoNombre;
-        item.cantidad = parseInt(nuevaCantidad);
-        localStorage.setItem('inventario', JSON.stringify(inventario));
-        mostrarInventario();
-    }
+            if (!nuevoNombre || isNaN(nuevaCantidad) || nuevaCantidad < 0) {
+                Swal.showValidationMessage('Por favor, ingresa un nombre válido y una cantidad positiva');
+                return false;
+            }
+
+            return { nuevoNombre, nuevaCantidad };
+        }
+    }).then(result => {
+        if (result.isConfirmed) {
+            const { nuevoNombre, nuevaCantidad } = result.value;
+            item.articulo = nuevoNombre;
+            item.cantidad = nuevaCantidad;
+            localStorage.setItem('inventario', JSON.stringify(inventario));
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Artículo actualizado',
+                text: `El artículo "${nuevoNombre}" se actualizó correctamente.`,
+                timer: 1500,
+                showConfirmButton: false
+            });
+
+            mostrarInventario();
+        }
+    });
 }
+

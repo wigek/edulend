@@ -46,8 +46,8 @@
 
                 <div class="btn-container">
                     <button type="submit">
-                    <i data-lucide="plus" style="vertical-align: middle;"></i>
-                    <span style="margin-left: 6px;">Agregar producto al inventario</span>
+                        <i data-lucide="plus" style="vertical-align: middle;"></i>
+                        <span style="margin-left: 6px;">Agregar producto al inventario</span>
                     </button>
 
                 </div>
@@ -68,14 +68,7 @@
                         <th>Acción</th>
                     </tr>
                     <tr>
-                        <td>Computador</td>
-                        <td>06/06/06</td>
-                        <td>07/07/07</td>
-                        <td>En buen estado</td>
-                        <td>
-                            <button type="button">Editar</button>
-                            <button type="button">Eliminar</button>
-                        </td>
+
                     </tr>
                 <tbody>
                     <!-- se supone que acá se agregan los productos dinamicamente -->
@@ -92,6 +85,7 @@
             <a href="https://www.edulend.com/contacto">Contacto</a>
         </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const urlActual = window.location.pathname;
 
@@ -105,7 +99,7 @@
         });
     </script>
     <script>
-    lucide.createIcons();
+        lucide.createIcons();
     </script>
     <script src="/public/JS/item-inventory.js"></script>
 </body>
