@@ -44,8 +44,9 @@ function Init() {
         const usuario = formLogin.querySelector('input[name="usuario"]').value;
         const contrasenia = formLogin.querySelector('input[name="contasenia"]').value;
 
+        localStorage.removeItem("usuarioActual");
+        
         const usuarioGuardado = JSON.parse(localStorage.getItem(usuario));
-
        
         if (usuarioGuardado && usuario === usuarioGuardado.email && contrasenia === usuarioGuardado.contrasenia) {
             Toast.fire({
@@ -53,6 +54,9 @@ function Init() {
                 title: "Inicio de sesión exitoso",
                 text: "Bienvenido a EduLend, " + usuario
             });
+
+            localStorage.setItem("usuarioActual", usuarioGuardado.email);
+
             setTimeout(() => {
                 window.location.href = "/views/user_lend.html";
             }, 1600);
